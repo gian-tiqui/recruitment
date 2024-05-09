@@ -7,23 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-
-@NoArgsConstructor
-class Message {
-
-    private Long senderId;
-    private Long receiverId;
-    private String message;
-    private LocalDateTime sentAt;
-
-    public Message(Long senderId, Long receiverId, String message) {
-        this.senderId = senderId;
-        this.receiverId = receiverId;
-        this.sentAt = LocalDateTime.now();
-        this.message = message;
-    }
-}
 
 @Getter
 @Setter
@@ -34,8 +17,14 @@ public class Messages {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long mid;
 
-    @Column(name = "messages")
-    private ArrayList<Message> messages;
+    @Column(name = "sender_id")
+    private Long senderId;
+
+    @Column(name = "receiver_id")
+    private Long receiverId;
+
+    @Column(name = "sent_at")
+    private LocalDateTime sentAt;
 }
