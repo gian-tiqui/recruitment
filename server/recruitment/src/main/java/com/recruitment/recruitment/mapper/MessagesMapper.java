@@ -10,7 +10,8 @@ public class MessagesMapper {
                 messageDto.getMid(),
                 messageDto.getSenderId(),
                 messageDto.getReceiverId(),
-                messageDto.getSentAt()
+                messageDto.getSentAt(),
+                messageDto.getStatus()
         );
     }
 
@@ -20,7 +21,8 @@ public class MessagesMapper {
                 messages.getMid(),
                 messages.getSenderId(),
                 messages.getReceiverId(),
-                messages.getSentAt()
+                messages.getSentAt(),
+                messages.getStatus()
         );
     }
 }

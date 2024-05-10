@@ -17,4 +17,5 @@ public class MessageDto {
     private Long senderId;
     private Long receiverId;
     private LocalDateTime sentAt;
+    private String status;
 }

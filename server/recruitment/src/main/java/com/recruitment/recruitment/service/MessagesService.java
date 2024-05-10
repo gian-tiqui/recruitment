@@ -8,6 +8,5 @@ public interface MessagesService {
 
     Messages getMessagesById();
     List<Messages> getMessages();
-    List<Messages> getMessagesSentBy();
-    List<Messages> getMessagesReceivedBy();
+    List<Messages> getSingleChatMessages(Long senderId, Long receiverId);
 }
