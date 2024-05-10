@@ -27,4 +27,7 @@ public class Messages {
 
     @Column(name = "sent_at")
     private LocalDateTime sentAt;
+
+    @Column(name = "status")
+    private String status;
 }
