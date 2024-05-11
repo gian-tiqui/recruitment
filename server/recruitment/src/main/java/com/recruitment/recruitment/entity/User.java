@@ -60,6 +60,12 @@ public class User {
     @Column(name = "user_type")
     private String userType;
 
+    @Column(name = "created_at")
+    private LocalDate createdAt;
+
+    @Column(name = "updated_at")
+    private LocalDate updatedAt;
+
     public static int getAge(int birthYear, int birthMonth, int birthDate) throws InvalidBirthdayException {
         LocalDate birthday = getBirthday(birthYear, birthMonth, birthDate);
         LocalDate today = LocalDate.now();

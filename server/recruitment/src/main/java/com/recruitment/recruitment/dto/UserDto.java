@@ -29,6 +29,8 @@ public class UserDto {
     private String phone;
     private String email;
     private String userType;
+    private LocalDate createdAt;
+    private LocalDate updatedAt;
 
     public static int getAge(int birthYear, int birthMonth, int birthDate) throws UserDto.InvalidBirthdayException {
         LocalDate birthday = getBirthday(birthYear, birthMonth, birthDate);
