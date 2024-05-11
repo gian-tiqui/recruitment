@@ -3,24 +3,28 @@ package com.recruitment.recruitment.mapper;
 import com.recruitment.recruitment.dto.UserDto;
 import com.recruitment.recruitment.entity.User;
 
+import java.util.Locale;
+
 public class UserMapper {
     static public User mapToUser(UserDto userDto) {
 
         return new User(
-          userDto.getUid(),
-          userDto.getPassword(),
-          userDto.getFirstName(),
-          userDto.getMiddleName(),
-          userDto.getLastName(),
-          userDto.getBirthYear(),
-          userDto.getBirthMonth(),
-          userDto.getBirthDate(),
-          userDto.getSex(),
-          userDto.getStatus(),
-          userDto.getAddress(),
-          userDto.getPhone(),
-          userDto.getEmail(),
-          userDto.getUserType()
+                userDto.getUid(),
+                userDto.getPassword(),
+                userDto.getFirstName(),
+                userDto.getMiddleName(),
+                userDto.getLastName(),
+                userDto.getBirthYear(),
+                userDto.getBirthMonth(),
+                userDto.getBirthDate(),
+                userDto.getSex(),
+                userDto.getStatus(),
+                userDto.getAddress(),
+                userDto.getPhone(),
+                userDto.getEmail(),
+                userDto.getUserType(),
+                userDto.getCreatedAt(),
+                userDto.getUpdatedAt()
         );
     }
 
@@ -40,7 +44,9 @@ public class UserMapper {
                 user.getAddress(),
                 user.getPhone(),
                 user.getEmail(),
-                user.getUserType()
+                user.getUserType(),
+                user.getCreatedAt(),
+                user.getUpdatedAt()
         );
     }
 }
